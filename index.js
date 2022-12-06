@@ -5,18 +5,20 @@ function isPalindrome(word) {
   //console.log(newArray)
 
   let newReversedArray = newArray.reverse();
- // console.log(newReversedArray)
+  //console.log(newReversedArray)
 
  let joinReverseArray = newReversedArray.join('')
- console.log(joinReverseArray);
+    console.log(joinReverseArray);
  if(word === joinReverseArray){
-   console.log("Is palindrome")
+  // console.log(`${word} Is palindrome`)
+  return true;
  }
  else{
-   console.log("Is not palindrome")
+   //console.log(`${word} Is not palindrome`)
+   return false;
  }
 }
- isPalindrome("racecar")
+ 
   
 
 
@@ -40,11 +42,20 @@ function isPalindrome(word) {
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
-  console.log("Expecting:racecar=== racecar to equal true");
-  console.log("=>", isPalindrome("racecar"));
+  isPalindrome("racecar");
+  
+  //console.log("Expecting:racecar=== racecar to equal true");
+ 
+  isPalindrome("abba");
+  
+  // console.log("Expecting: robot === tobor false");
+  isPalindrome("a");
+  isPalindrome("robot");
+  isPalindrome("ab");
+  
+}
 
-  console.log("is palindrome");
+module.exports = isPalindrome; 
+  
 
-  console.log("Expecting: helloworld === dlrowolloeh false");
-  console.log("=>", isPalindrome("robot"));
-}module.exports = isPalindrome; 
+
